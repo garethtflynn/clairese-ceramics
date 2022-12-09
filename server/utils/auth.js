@@ -15,7 +15,7 @@ module.exports = {
         }
 
         try {
-            const { data } = fwt.verify(token, secret, {
+            const { data } = jwt.verify(token, secret, {
                 maxAge: expiration
             });
             req.user = data;
