@@ -16,7 +16,13 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.8",
     "web-vitals": "^2.1.4",
-    "graphql": "^14.6.0",
+    "apollo-server-express": "^3.6.2",
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "stripe": "^8.67.0",
     "jwt-decode": "^2.2.0"
   },
   "scripts": {
