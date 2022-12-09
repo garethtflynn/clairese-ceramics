@@ -16,7 +16,7 @@ const typeDefs = gql`
     category: Category
   }
 
-  type Order: {
+  type Order {
     _id: ID
     purchaseDate: String
     products: [Product]
@@ -45,10 +45,10 @@ const typeDefs = gql`
     product(_id: ID!): Product
     user: User
     order(_id: ID!): Order
-    checkout(products: [ID]!) Checkout    
+    checkout(products: [ID]!): Checkout    
   }
 
-  type Mutations: {
+  type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
