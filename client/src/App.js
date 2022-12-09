@@ -1,4 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+
+function App() {
+  return (
+    <div>
+      <Login />
+      <Signup />
+    </div>
+=======
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -53,6 +64,7 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+>>>>>>> main
   );
 }
 
