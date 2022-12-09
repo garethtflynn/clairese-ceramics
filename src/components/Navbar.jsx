@@ -12,8 +12,8 @@ function NavigationBar() {
                 <Navbar.Brand href="https://flowbite.com/">
                 <Link to="/"><img
                     src={logo} 
-                    className="mr-3 h-6 sm:h-9 "
-                    alt="gareth-flynn-logo"
+                    className="mr-3 h-6 sm:h-9"
+                    alt="Clairese Ceramics Logo"
                     style={{width: '80px', height: '80px'}}
                 /></Link>
                 </Navbar.Brand>
