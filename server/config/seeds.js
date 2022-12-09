@@ -54,7 +54,7 @@ db.once("open", async () => {
 
   await User.create({
     firstName: 'Jane',
-    lasName: 'Doe',
+    lastName: 'Doe',
     email: 'jane@testmail.com',
     password: 'password123',
     orders: [
