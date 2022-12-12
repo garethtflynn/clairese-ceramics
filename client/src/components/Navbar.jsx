@@ -8,14 +8,14 @@ function navigationBar() {
             fluid={true}
             rounded={true}
         >
-        <Navbar.Brand href="https://flowbite.com/">
+        <Navbar.Brand href="#">
             <img
                 src=""
                 className="mr-3 h-6 sm:h-9"
-                alt="Flowbite Logo"
+                alt="Clairese Ceramics Logo"
             />
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                Flowbite
+                Clairese Ceramics
             </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
@@ -26,7 +26,7 @@ function navigationBar() {
             >
             <Dropdown.Header>
                 <span className="block text-sm">
-                    Test Accont
+                    Test Account
                 </span>
                 <span className="block truncate text-sm font-medium">
                     name@gmail.com
@@ -68,3 +68,5 @@ function navigationBar() {
     </Navbar>
     )
 }
+
+export default navigationBar;
