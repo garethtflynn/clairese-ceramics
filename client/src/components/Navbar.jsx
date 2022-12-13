@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/cclogo.png";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -81,7 +81,7 @@ const NavBar = () => {
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex space-x-4 py-12">
               <a
-                href="#"
+                href="./pages/Login.jsx"
                 className="bg-[#B0BEC7] text-white italic px-3 py-2 rounded-md text-md font-regular"
                 aria-current="page"
               >
@@ -89,14 +89,14 @@ const NavBar = () => {
               </a>
 
               <a
-                href="#"
+                href="./pages/Login.jsx"
                 className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 About
               </a>
 
               <a
-                href="#"
+                href="./pages/Login.jsx"
                 className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 Contact
@@ -107,7 +107,7 @@ const NavBar = () => {
         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <button
             type="button"
-            className="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            className="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-[#B0BEC7]"
           >
             <span className="sr-only">View notifications</span>
             {/* Heroicon  */}
@@ -126,7 +126,7 @@ const NavBar = () => {
             <div>
               <button
                 type="button"
-                className="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-[#B0BEC7]"
               >
                 <span className="sr-only">View notifications</span>
                 {/* Heroicon  */}
@@ -148,22 +148,20 @@ const NavBar = () => {
             {/* hide menu until profile is clicked */}
             <div
               onClick={() => setNav(!nav)}
-              className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              className="absolute right-0 z-18 mt-2 w-48 origin-top-right rounded-md bg-white py-1 "
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu-button"
             >
-              <ul>
-                {navLinks.map(({ id, link }) => (
-                  <li
-                    key={id}
-                    className="block px-4 py-2 text-sm text-black italic"
-                  >
-                    {link}
-                  </li>
-                ))}
-              </ul>
-              <div onClick={() => setNav(!nav)} className="bg-red-500"></div>
+              {nav && (
+                <ul className="">
+                  {navLinks.map(({ id, link }) => (
+                    <li key={id} className="px-4 py-2 text-red-400 italic">
+                      {link}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </div>
@@ -173,7 +171,7 @@ const NavBar = () => {
       <div className="sm:hidden" id="mobile-menu">
         <div className="space-y-1 px-2 pt-6 pb-3">
           <a
-            href="#"
+            href="./pages/Login.jsx"
             className="bg-[#B0BEC7] text-white italic block px-3 py-2 rounded-md text-md font-regular"
             aria-current="page"
           >
@@ -181,14 +179,14 @@ const NavBar = () => {
           </a>
 
           <a
-            href="#"
+            href="./pages/Login.jsx"
             className="text-black italic hover:bg-[#B0BEC7] hover:text-white block px-3 py-2 rounded-md text-md font-regular"
           >
             About
           </a>
 
           <a
-            href="#"
+            href="./pages/Login.jsx"
             className="text-black italic hover:bg-[#B0BEC7] hover:text-white block px-3 py-2 rounded-md text-md font-regular"
           >
             Contact
