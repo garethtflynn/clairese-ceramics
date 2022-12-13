@@ -5,19 +5,22 @@ import { FaBars, FaTimes, FaUser, FaShoppingCart } from "react-icons/fa";
 //import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
   const menuLinks = [
     {
       id: 1,
-      link: "Shop Collections",
+      item: "Shop Collections",
+      itemLink: "a",
     },
     {
       id: 2,
-      link: "About",
+      item: "About",
+      itemLink: "b",
     },
     {
       id: 3,
-      link: "Contact",
+      item: "Contact",
+      itemLink: "c",
     },
   ];
 
@@ -25,15 +28,18 @@ const NavBar = () => {
   const profileLinks = [
     {
       id: 1,
-      link: "Settings",
+      item: "Settings",
+      itemLink: "d",
     },
     {
       id: 2,
-      link: "Orders",
+      item: "Orders",
+      itemLink: "e",
     },
     {
       id: 3,
-      link: "Sign out",
+      item: "Sign out",
+      itemLink: "f",
     },
   ];
 
@@ -93,9 +99,10 @@ const NavBar = () => {
               >
                 {menu && (
                   <ul className="absolute left-0 z-18 mt-12 w-48 origin-top-left rounded-md bg-white py-1">
-                    {menuLinks.map(({ id, link }) => (
+                    {menuLinks.map(({ id, item, itemLink }) => (
                       <li key={id} className="px-4 py-2 text-gray-800 italic">
-                        {link}
+                        {item}
+                        {itemLink}
                       </li>
                     ))}
                   </ul>
@@ -120,7 +127,7 @@ const NavBar = () => {
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex space-x-4 py-12">
               <a
-                href="../pages/Login.jsx"
+                href="./Login"
                 className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
                 aria-current="page"
               >
@@ -128,14 +135,14 @@ const NavBar = () => {
               </a>
 
               <a
-                href="./pages/Login.jsx"
+                href="./Login"
                 className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 About
               </a>
 
               <a
-                href="./pages/Login.jsx"
+                href="./Login"
                 className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 Contact
@@ -178,7 +185,7 @@ const NavBar = () => {
               {/* change state to toggle user menu */}
               <div
                 onClick={() => setProfile(!profile)}
-                className="rounded-full p-1 text-[#B0BEC7] hover:text-white hover:bg-[#B0BEC7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-[#B0BEC7]"
+                className="rounded-full p-1 text-[#B0BEC7] hover:text-white hover:bg-[#B0BEC7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 <span className="sr-only">profile menu</span>
                 {/* Heroicon  */}
@@ -200,22 +207,25 @@ const NavBar = () => {
               </div>
             </div>
 
-            {/* hide menu until profile is clicked */}
-            <div
-              className=""
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="user-menu-item"
-            >
-              {profile && (
-                <ul className="absolute right-0 z-18 mt-8 w-48 origin-top-right rounded-md bg-white py-1">
-                  {profileLinks.map(({ id, link }) => (
-                    <li key={id} className="px-4 py-2 text-gray-800 italic">
-                      {link}
-                    </li>
-                  ))}
-                </ul>
-              )}
+            <div>
+              {/* hide menu until profile is clicked */}
+              <div
+                className=""
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-item"
+              >
+                {profile && (
+                  <ul className="absolute right-0 z-18 mt-8 w-48 origin-top-right rounded-md bg-white py-1">
+                    {profileLinks.map(({ id, item, itemLink }) => (
+                      <li key={id} className="px-4 py-2 text-gray-800 italic">
+                        {item}
+                        {itemLink}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           </div>
         </div>
