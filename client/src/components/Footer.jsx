@@ -2,10 +2,10 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 function footer() {
     return (
-        <footer class="text-center text-white">
-            <div class="flex justify-end mr-4">
+        <footer className="text-center text-white">
+            <div className="flex justify-end mr-4">
                 
-                <a href="#!" type="button" class="rounded-full bg-black text-white uppercase w-9 h-9 mt-4 mr-2">
+                <a href="#!" type="button" className="rounded-full bg-black text-white uppercase w-9 h-9 mt-4 mr-2">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -22,7 +22,7 @@ function footer() {
                     </svg>
                 </a>
 
-                <a href="#!" type="button" class="rounded-full bg-black text-white uppercase w-9 h-9 mt-4">
+                <a href="#!" type="button" className="rounded-full bg-black text-white uppercase w-9 h-9 mt-4">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -40,7 +40,7 @@ function footer() {
                 </a>
             </div>
 
-            <div class="w-full flex justify-between text-black italic p-4">
+            <div className="w-full flex justify-between text-black italic p-4">
                 © 2022 Clairese Ceramics
                 <div class="flex space-x-6">
                     <a href="#">Shipping Policy</a>
