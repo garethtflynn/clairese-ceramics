@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-
-function App() {
-  return (
-    <div>
-      <Login />
-      <Signup />
-    </div>
-=======
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -22,6 +11,11 @@ import { setContext } from '@apollo/client/link/context';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { StoreProvider } from './utils/GlobalState';
+
+// //components
+import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -49,6 +43,8 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+          <Banner />
+          <Navbar />
           <StoreProvider>
             <Routes>
               <Route 
@@ -62,9 +58,9 @@ function App() {
             </Routes>
           </StoreProvider>
         </div>
+        <Footer />
       </Router>
     </ApolloProvider>
->>>>>>> main
   );
 }
 
