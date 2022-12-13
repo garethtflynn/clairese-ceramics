@@ -19,6 +19,7 @@ const NavBar = () => {
       link: "Sign out",
     },
   ];
+
   return (
     <div className="mx-auto max-w-7xl px-2 py-6 sm:px-6 sm:py-6 lg:px-8">
       <div className="relative flex h-16 items-center justify-between">
@@ -124,8 +125,8 @@ const NavBar = () => {
           {/* Profile dropdown */}
           <div className="relative ml-3">
             <div>
-              <button
-                type="button"
+              <div
+                onClick={() => setNav(!nav)}
                 className="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-[#B0BEC7]"
               >
                 <span className="sr-only">View notifications</span>
@@ -142,12 +143,11 @@ const NavBar = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-              </button>
+              </div>
             </div>
 
             {/* hide menu until profile is clicked */}
             <div
-              onClick={() => setNav(!nav)}
               className="absolute right-0 z-18 mt-2 w-48 origin-top-right rounded-md bg-white py-1 "
               role="menu"
               aria-orientation="vertical"
@@ -156,7 +156,7 @@ const NavBar = () => {
               {nav && (
                 <ul className="">
                   {navLinks.map(({ id, link }) => (
-                    <li key={id} className="px-4 py-2 text-red-400 italic">
+                    <li key={id} className="px-4 py-2 text-gray-800 italic">
                       {link}
                     </li>
                   ))}
