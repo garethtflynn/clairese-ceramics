@@ -8,7 +8,7 @@ import { idbPromise } from "../../utils/";
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
-  const { currentCategory } = state;
+  const { currentProducts } = state;
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
@@ -29,10 +29,32 @@ function ProductList() {
       });
     }
   }, [data, loading, dispatch]);
-  
-  
+
+  function showProducts() {
+    if (!currentProducts) {
+      return loading;
+    }
+    return state.products.filter(
+      (product) => product.category._id === currentProducts
+    );
+  }
+
   return (
-      <div>
-        
-      </div>);
+    <div className="my-2">
+      <h1>Main Collection</h1>
+      <div className="flex-row">
+        {showProducts().map((product) => (
+          <ProductItem
+            key={product._id}
+            _id={product._id}
+            image={product.image}
+            name={product.name}
+            price={product.price}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
+
+export default ProductList;
