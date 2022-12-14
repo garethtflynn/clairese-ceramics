@@ -4,23 +4,32 @@ import logo from "../assets/cclogo.png";
 import { FaBars, FaTimes, FaUser, FaShoppingCart } from "react-icons/fa";
 //import { Link } from "react-router-dom";
 
+// menu landing pages
+
+const shopPage = ": Shop";
+const aboutPage = ": About";
+const contactPage = ": Contact";
+const settingsPage = ": Settings";
+const ordersPage = ": Orders";
+const signOutPage = ": Sign Out";
+
 const NavBar = () => {
   const [menu, setMenu] = useState(false);
   const menuLinks = [
     {
       id: 1,
       item: "Shop Collections",
-      itemLink: "a",
+      itemLink: shopPage,
     },
     {
       id: 2,
       item: "About",
-      itemLink: "b",
+      itemLink: aboutPage,
     },
     {
       id: 3,
       item: "Contact",
-      itemLink: "c",
+      itemLink: contactPage,
     },
   ];
 
@@ -29,17 +38,17 @@ const NavBar = () => {
     {
       id: 1,
       item: "Settings",
-      itemLink: "d",
+      itemLink: settingsPage,
     },
     {
       id: 2,
       item: "Orders",
-      itemLink: "e",
+      itemLink: ordersPage,
     },
     {
       id: 3,
       item: "Sign out",
-      itemLink: "f",
+      itemLink: signOutPage,
     },
   ];
 
@@ -56,41 +65,10 @@ const NavBar = () => {
           >
             <span className="sr-only">Open main menu</span>
 
-            {/*             <svg
-              className="block h-6 w-6 text-black"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
- */}
             {menu ? <FaTimes size={20} /> : <FaBars size={20} />}
-            {/*             <svg
-              className="hidden h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
- */}
+
             <div>
-              {/* hide menu until menu is clicked */}
+              {/* hide menu until hamburger is clicked */}
               <div
                 className=""
                 role="menu"
@@ -111,6 +89,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+
         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div className="flex flex-shrink-0 items-center">
             <img
@@ -124,6 +103,7 @@ const NavBar = () => {
               alt="Your Company"
             />
           </div>
+
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex space-x-4 py-12">
               <a
@@ -156,16 +136,7 @@ const NavBar = () => {
             className="rounded-full p-1 text-[#B0BEC7] hover:text-white hover:bg-[#B0BEC7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-[#B0BEC7]"
           >
             <span className="sr-only">View notifications</span>
-            {/* Heroicon - cart  */}
-            {/*             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="black"
-              class="w-6 h-6"
-            >
-              <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-            </svg>
- */}
+
             <FaShoppingCart size={20} />
             <div>
               <a
@@ -188,21 +159,7 @@ const NavBar = () => {
                 className="rounded-full p-1 text-[#B0BEC7] hover:text-white hover:bg-[#B0BEC7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 <span className="sr-only">profile menu</span>
-                {/* Heroicon  */}
-                {/*                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="black"
-                  class="w-6 h-6"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
 
- */}
                 <FaUser size={20} />
               </div>
             </div>
@@ -230,34 +187,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      {/* Mobile menu, show/hide based on menu state. */}
-
-      {/*       <div className="sm:hidden" id="mobile-menu">
-        <div className="space-y-1 px-2 pt-6 pb-3">
-          <a
-            href="./pages/Login.jsx"
-            className="text-black italic hover:bg-[#B0BEC7] hover:text-white block px-3 py-2 rounded-md text-md font-regular"
-            aria-current="page"
-          >
-            Shop Collections
-          </a>
-
-          <a
-            href="./pages/Login.jsx"
-            className="text-black italic hover:bg-[#B0BEC7] hover:text-white block px-3 py-2 rounded-md text-md font-regular"
-          >
-            About
-          </a>
-
-          <a
-            href="./pages/Login.jsx"
-            className="text-black italic hover:bg-[#B0BEC7] hover:text-white block px-3 py-2 rounded-md text-md font-regular"
-          >
-            Contact
-          </a>
-        </div>
-      </div>
- */}
     </div>
   );
 };
