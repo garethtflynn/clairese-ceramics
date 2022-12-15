@@ -14,9 +14,9 @@ import Signup from './pages/Signup';
 import { StoreProvider } from './utils/GlobalState';
 
 // //components
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar/index';
+import Banner from './components/Banner/index';
+import Footer from './components/Footer/index';
 
 const httpLink = createHttpLink({
   uri: '/graphql',

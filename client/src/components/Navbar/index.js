@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/cclogo.png";
+import logo from '../../assets/cclogo.png';
 
 import { FaBars, FaTimes, FaUser, FaShoppingCart } from "react-icons/fa";
 //import { Link } from "react-router-dom";
