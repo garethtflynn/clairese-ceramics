@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/cclogo.png";
+import logo from '../../assets/cclogo.png';
 
 import { FaBars, FaTimes, FaUser, FaShoppingCart } from "react-icons/fa";
 //import { Link } from "react-router-dom";
@@ -44,13 +44,13 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="sticky mx-auto max-w-7xl px-2 py-6 sm:px-6 sm:py-6 lg:px-8">
+    <div className="sticky mx-auto max-w-7xl px-2 py-6 sm:px-6 sm:py-6 lg:px-8 ">
       <div className="relative flex h-16 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* Mobile menu */}
           <div
             onClick={() => setMenu(!menu)}
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#B0BEC7] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            className="rounded inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-[#B0BEC7] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -128,7 +128,7 @@ const NavBar = () => {
             <div className="flex space-x-4 py-12">
               <a
                 href="./Login"
-                className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
+                className="text-black font-light italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
                 aria-current="page"
               >
                 Shop Collections
@@ -136,14 +136,14 @@ const NavBar = () => {
 
               <a
                 href="./Login"
-                className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
+                className="text-black font-light italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 About
               </a>
 
               <a
                 href="./Login"
-                className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
+                className="text-black font-light italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 Contact
               </a>
@@ -153,7 +153,7 @@ const NavBar = () => {
         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <button
             type="button"
-            className="rounded-full p-1 text-[#B0BEC7] hover:text-white hover:bg-[#B0BEC7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-[#B0BEC7]"
+            className="rounded-full p-2 text-black hover:bg-[#B0BEC7] hover:text-white hover:p-2"
           >
             <span className="sr-only">View notifications</span>
             {/* Heroicon - cart  */}
@@ -185,7 +185,7 @@ const NavBar = () => {
               {/* change state to toggle user menu */}
               <div
                 onClick={() => setProfile(!profile)}
-                className="rounded-full p-1 text-[#B0BEC7] hover:text-white hover:bg-[#B0BEC7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="rounded-full p-2 text-black hover:bg-[#B0BEC7] hover:text-white hover:p-2"
               >
                 <span className="sr-only">profile menu</span>
                 {/* Heroicon  */}
