@@ -128,7 +128,7 @@ const NavBar = () => {
             <div className="flex space-x-4 py-12">
               <a
                 href="./Login"
-                className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
+                className="text-black font-light italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
                 aria-current="page"
               >
                 Shop Collections
@@ -136,14 +136,14 @@ const NavBar = () => {
 
               <a
                 href="./Login"
-                className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
+                className="text-black font-light italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 About
               </a>
 
               <a
                 href="./Login"
-                className="text-black italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
+                className="text-black font-light italic hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md text-md font-regular"
               >
                 Contact
               </a>

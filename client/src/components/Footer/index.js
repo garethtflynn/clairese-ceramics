@@ -40,7 +40,7 @@ function footer() {
                 </a>
             </div>
 
-            <div className="w-full flex justify-between text-black italic p-4 text-sm">
+            <div className="w-full flex justify-between text-black font-light italic p-4 text-sm">
                 © 2022 Clairese Ceramics
                 <div class="flex space-x-6 text-sm">
                     <a href="#">Shipping Policy</a>
