@@ -1,22 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { useStoreContext } from "../../utils/GlobalState";
-// import { ADD_TO_CART, UPDATE_CART_QUANTITY  } from "../../utils/actions";
-// import { idbPromise } from "../../utils/";
+import curvymug from '../../assets/curvymug1.jpg'
+import pitcher from '../../assets/pitcher1.jpg'
+import set from '../../assets/set1.jpg'
+import twinmug from '../../assets/twinmug1.jpg'
 
-function ProductItem(item) {
-  //   const [state, dispatch] = useStoreContext();
 
-  const { _id, name, price, quantity, image } = item;
+
+
+function ProductItem(props) {
+
+  const { _id, name, price, image } = props.item;
+
+    const getImage = () => {
+        if (image === 'curvymug1.jpg'){
+            return curvymug;
+        } if (image === 'pitcher1.jpg'){ 
+            return pitcher
+        } if (image === 'set1.jpg') {
+            return set
+        } if (image === 'twinmug1.jpg') {
+            return twinmug
+        }
+    }
 
   return (
-    <div className="card ">
-      <Link to={`/product/${_id}`}>
+    <div className=" ">
+      <Link to={`/Products/${_id}`}>
         <img 
          alt={name} 
-         src={`/images/${image}`} />
+         src={getImage()} />
         <p>
-          {name} - {price}
+          {name} - ${price}
         </p>
       </Link>
     </div>

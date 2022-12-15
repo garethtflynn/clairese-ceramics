@@ -3,13 +3,13 @@ import ProductItem from "../ProductItem";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from "@apollo/client";
-import { QUERY_PRODUCTS } from "../../utils/";
-import { idbPromise } from "../../utils/";
+import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+import { idbPromise } from "../../utils/helpers";
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
   const { currentProducts } = state;
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
 
   useEffect(() => {
     if (data) {
@@ -28,28 +28,31 @@ function ProductList() {
         });
       });
     }
-  }, [data, loading, dispatch]);
-
-  function showProducts() {
-    if (!currentProducts) {
-      return loading;
-    }
-    return state.products.filter(
-      (product) => product.category._id === currentProducts
-    );
-  }
-
+    function showProducts() {
+        if (!currentProducts) {
+          return loading;
+        } 
+         state.products.filter(
+        
+          (product) => product.category._id === currentProducts
+        );
+        console.log(state.products) 
+        return state.products;
+      } 
+      showProducts() 
+  }, []);
+  
+if (loading) {
+    return 'loading'
+}
   return (
-    <div className="my-2">
+    <div className= "bg-[#EDEDE8]">
       <h1>Main Collection</h1>
-      <div className="flex-row">
-        {showProducts().map((product) => (
+      <div className="flex w-full h-screen space-x-4">
+        {data.products.map((product) => (
           <ProductItem
             key={product._id}
-            _id={product._id}
-            image={product.image}
-            name={product.name}
-            price={product.price}
+            item = {product}
           />
         ))}
       </div>
