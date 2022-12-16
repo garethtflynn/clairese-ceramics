@@ -4,32 +4,23 @@ import logo from '../../assets/cclogo.png';
 import { FaBars, FaTimes, FaUser, FaShoppingCart } from "react-icons/fa";
 //import { Link } from "react-router-dom";
 
-// menu landing pages
-
-const shopPage = ": Shop";
-const aboutPage = ": About";
-const contactPage = ": Contact";
-const settingsPage = ": Settings";
-const ordersPage = ": Orders";
-const signOutPage = ": Sign Out";
-
 const NavBar = () => {
   const [menu, setMenu] = useState(false);
   const menuLinks = [
     {
       id: 1,
       item: "Shop Collections",
-      itemLink: shopPage,
+      itemLink: "a",
     },
     {
       id: 2,
       item: "About",
-      itemLink: aboutPage,
+      itemLink: "b",
     },
     {
       id: 3,
       item: "Contact",
-      itemLink: contactPage,
+      itemLink: "c",
     },
   ];
 
@@ -38,17 +29,17 @@ const NavBar = () => {
     {
       id: 1,
       item: "Settings",
-      itemLink: settingsPage,
+      itemLink: "d",
     },
     {
       id: 2,
       item: "Orders",
-      itemLink: ordersPage,
+      itemLink: "e",
     },
     {
       id: 3,
       item: "Sign out",
-      itemLink: signOutPage,
+      itemLink: "f",
     },
   ];
 
