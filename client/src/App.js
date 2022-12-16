@@ -48,7 +48,7 @@ function App() {
           <Navbar />
           <StoreProvider>
             <Routes>
-              <Route path="/Home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/Products" element={<Products />} />
