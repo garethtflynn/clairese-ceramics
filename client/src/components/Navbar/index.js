@@ -95,7 +95,7 @@ const NavBar = () => {
                 className=""
                 role="menu"
                 aria-orientation="vertical"
-                aria-labelledby="user-menu-item"
+                labelled="user-menu-item"
               >
                 {menu && (
                   <ul className="absolute left-0 z-18 mt-12 w-48 origin-top-left rounded-md bg-white py-1">
@@ -213,7 +213,7 @@ const NavBar = () => {
                 className=""
                 role="menu"
                 aria-orientation="vertical"
-                aria-labelledby="user-menu-item"
+                labelled="user-menu-item"
               >
                 {profile && (
                   <ul className="absolute right-0 z-18 mt-8 w-48 origin-top-right rounded-md bg-white py-1">
