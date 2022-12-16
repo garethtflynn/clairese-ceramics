@@ -30,17 +30,6 @@ function AddModal(props) {
                   return twinmug
               }
           }
-
-          <div className=" ">
-      <Link to={`/Products/${_id}`}>
-        <img 
-         alt={name} 
-         src={getImage()} />
-        <p>
-          {name} - ${price}
-        </p>
-      </Link>
-    </div>
       
     return (
         <div className="w-screen h-screen flex justify-center items-center bg-[#EDEDE8] bg-opacity-50">

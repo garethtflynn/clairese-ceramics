@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Products from "./pages/Products";
+import Detail from "./pages/Cart";
 import { StoreProvider } from './utils/GlobalState';
 
 // //components
@@ -47,10 +48,11 @@ function App() {
           <Navbar />
           <StoreProvider>
             <Routes>
-              <Route path="/Home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/Products" element={<Products />} />
+              <Route path="/Cart" element={<Detail />} />
             </Routes>
           </StoreProvider>
         </div>

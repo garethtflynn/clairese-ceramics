@@ -2,6 +2,7 @@ import twinmug1 from '../assets/twinmug1.jpg';
 import pitcher1 from '../assets/pitcher1.jpg';
 import curvymug1 from '../assets/curvymug1.jpg';
 import set1 from '../assets/set1.jpg';
+import {Link} from 'react-router-dom'
 
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
                     class="block w-full"
                     alt="Twin Mug"
                     />
-                    <button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button>
+                    <Link to='/products'><button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
 
                 </div>
                 <div class="carousel-item relative float-left w-full">
@@ -23,7 +24,7 @@ function Home() {
                     class="block w-full"
                     alt="Pitcher"
                     />
-                    <button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button>
+                    <Link to='/products'><button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
 
                 </div>
                 <div class="carousel-item relative float-left w-full">
@@ -32,7 +33,7 @@ function Home() {
                     class="block w-full"
                     alt="Curvy Mug"
                     />
-                    <button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button>
+                    <Link to='/products'><button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
                 </div>
 
                 <div class="carousel-item relative float-left w-full">
@@ -41,7 +42,7 @@ function Home() {
                     class="block w-full"
                     alt="Full Set"
                     />
-                    <button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button>
+                    <Link to='/products'><button class="rounded absolute bottom-10 left-10 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
                 </div>
             </div>
         </div>
