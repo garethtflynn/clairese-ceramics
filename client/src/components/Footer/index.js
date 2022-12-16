@@ -10,7 +10,7 @@ function footer() {
                     focusable="false"
                     data-prefix="fab"
                     data-icon="facebook-f"
-                    class="w-3 h-full mx-auto"
+                    className="w-3 h-full mx-auto"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 320 512"
@@ -27,7 +27,7 @@ function footer() {
                     focusable="false"
                     data-prefix="fab"
                     data-icon="instagram"
-                    class="w-4 h-full mx-auto"
+                    className="w-4 h-full mx-auto"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -42,7 +42,7 @@ function footer() {
 
             <div className="w-full flex justify-between text-black font-light italic p-4 text-sm">
                 © 2022 Clairese Ceramics
-                <div class="flex space-x-6 text-sm">
+                <div className="flex space-x-6 text-sm">
                     <a href="#">Shipping Policy</a>
                     <a href="#">Return Policy</a>
                     <a href="#">Privacy Policy</a>
