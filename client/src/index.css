@@ -11,3 +11,7 @@
       @apply cursor-pointer
   }
 }
+
+.custome-image {
+  width: 100% !important;
+}
