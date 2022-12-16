@@ -32,13 +32,8 @@ function Login(props) {
 
   return (
     <div className="flex items-center w-full h-screen bg-[#EDDCD2]">
-<<<<<<< HEAD
       <div className="flex flex-col justify-center items-center mx-auto h-auto rounded-md max-w-screen-sm sm:w-[550px] py-8 gap-4">
-        <h2 className="text-2xl italic">Login</h2>
-=======
-      <div className='flex flex-col justify-center items-center mx-auto h-auto rounded-md max-w-screen-sm sm:w-[550px] py-8 gap-4'>
-        <h2 className='text-4xl font-light italic'>Login</h2>
->>>>>>> main
+        <h2 className="text-4xl font-light italic">Login</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="flex-row space-between my-2 sm:w-[500px]">
             <input
