@@ -72,8 +72,8 @@ function Signup(props) {
           />
         </div>
         <div className=" flex space-between">
-            <link to="/homepage"><button type="submit" className='flex text-white italic px-3 justify-center items-center mx-auto h-auto bg-[#A5A58D] hover:scale-105 duration-200'>Submit</button></link>
-            <link to="/login"><button className='flex text-white italic px-3 py-1 justify-center items-center mx-auto h-auto bg-[#DDBEA9] hover:scale-105 duration-200'>Cancel</button></link>
+            <Link to="/homepage"><button type="submit" className='flex text-white italic px-3 justify-center items-center mx-auto h-auto bg-[#A5A58D] hover:scale-105 duration-200'>Submit</button></Link>
+            <Link to="/login"><button className='flex text-white italic px-3 py-1 justify-center items-center mx-auto h-auto bg-[#DDBEA9] hover:scale-105 duration-200'>Cancel</button></Link>
         </div>
       </form>
     </div>
