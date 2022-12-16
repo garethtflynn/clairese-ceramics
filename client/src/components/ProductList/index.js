@@ -46,18 +46,20 @@ if (loading) {
     return 'loading'
 }
   return (
-    <div className= "bg-[#EDEDE8]">
-      <h1>Main Collection</h1>
-      <div className="flex w-full h-screen space-x-4">
-        {data.products.map((product) => (
-          <ProductItem
-            key={product._id}
-            item = {product}
-          />
-        ))}
+    <div className="mx-auto mb-20 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+      <h1 className="text-4xl text-center italic mb-4">Main Collection</h1>
+      <div className="pt-5 grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 mx-auto gap-5">
+          {data.products.map((product) => (
+            <ProductItem
+              key={product._id}
+              item = {product}
+            />
+          ))}
       </div>
     </div>
+  
   );
 }
 
 export default ProductList;
+

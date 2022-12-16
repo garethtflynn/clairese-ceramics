@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 
 const Products = () => {
   return (
-    <div>
+    
       <ProductList />
-    </div>
+  
   );
 };
 

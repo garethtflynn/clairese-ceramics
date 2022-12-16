@@ -25,16 +25,21 @@ function ProductItem(props) {
     }
 
   return (
-    <div className=" ">
-      <Link to={`/Products/${_id}`}>
-        <img 
-         alt={name} 
-         src={getImage()} />
-        <p>
-          {name} - ${price}
-        </p>
-      </Link>
+    <div className="grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mx-auto gap-5">
+      <div className="text-center">
+        <Link to={`/Products/${_id}`}>
+          <img 
+            alt={name} 
+            src={getImage()} 
+          />
+          <p className="mt-3 mb-2">
+            {name} - ${price}
+          </p>
+          <button class="px-10 py-1 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7]">Add To Cart</button>
+        </Link>
+      </div>
     </div>
+    
   );
 }
 
