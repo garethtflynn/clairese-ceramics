@@ -116,12 +116,4 @@ function Detail() {
 }
 
 export default Detail;
-=======
-import React from "react";
 
-const Cart = () => {
-  return <div>Cart</div>;
-};
-
-export default Cart;
->>>>>>> 10250165a6998399d0a0ae759b77b5ba9c9ddb28
