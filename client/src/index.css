@@ -11,7 +11,7 @@
       @apply cursor-pointer
   }
 }
-
-.custome-image {
-  width: 100% !important;
+.fontFamily {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 0.1em;
 }
