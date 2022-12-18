@@ -1,50 +1,124 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import { validateEmail } from '../utils/helpers';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  return (
-    <div name="contact" className="h-screen w-full top-20">
-      <div>
-        <div className="flex flex-col justify-center p-4 m-auto max-w-screen-lg w-full h-full">
-          <div className="text-2xl font-bold p-4 rounded-lg mb-4 text-center m-0">
-            <p>Contact</p>
-          </div>
-          <div className="text-2xl rounded-lg text-white p-2 bg-slate-900">
-            <p>Please complete the form and click the submit button</p>
-          </div>
-
-          <div>
-            <form action="">
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                className="bg-transparent p-2 my-2 w-full border-2 rounded-lg text-white focus:bg-gray-200 focus:text-slate-900"
-              />
-              <input
-                type="text"
-                name="email"
-                placeholder="Enter your email address"
-                className="bg-transparent p-2 my-2 w-full border-2 rounded-lg text-white focus:bg-gray-200 focus:text-slate-900"
-              />
-              <textarea
-                name="message"
-                rows="10"
-                placeholder="Message"
-                className="bg-transparent p-2 my-2 border-2 w-full rounded-lg text-white focus:bg-gray-200 focus:text-slate-900"
-              ></textarea>
+    const [userEmail, setEmail] = useState('');
+    const [userName, setName] = useState('');
+    const [userMessage, setMessage] = useState('');
+    const [emailClasses, setemailClasses] = useState('my-2 p-2 bg-white rounded-md')
+    const [nameClasses, setnameClasses] = useState('my-2 p-2 bg-white rounded-md')
+    const [messageClasses, setmessageClasses] = useState('my-2 p-2 bg-white rounded-md')
+  
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
+  
+    const form = useRef()
+  
+    const handleInputChange = (e) => {
+      const { target } = e;
+      const inputType = target.name;
+      const inputValue = target.value;
+  
+      if (inputType === 'email') {
+        setEmail(inputValue);
+      } else if (inputType === 'name') {
+        setName(inputValue);
+      } else {
+        setMessage(inputValue);
+      }
+    };
+  
+    const handleFormSubmit = (e) => {
+      e.preventDefault();
+  
+      setemailClasses("my-4 p-2 bg-neutral-100")
+      setnameClasses("my-4 p-2 bg-neutral-100")
+      setmessageClasses("my-4 p-2 bg-neutral-100")
+  
+      if (!validateEmail(userEmail)) {
+        setemailClasses('bg-red-200 my-4 p-2')
+        setErrorMessage('Please enter a valid email!');
+        return;
+      }
+  
+      if (!userName) {
+        setnameClasses('bg-red-200 my-4 p-2')
+        setErrorMessage(
+          'Please enter a name before submitting'
+        );
+        return;
+      }
+  
+      if (!userMessage) {
+        setmessageClasses('bg-red-200 my-4 p-2')
+        setErrorMessage(
+          `Please enter a message before submitting`
+        );
+        return;
+      }
+  
+      emailjs.sendForm('service_kzpmai3', 'template_xncloki', form.current, 'wBFFLS68ZtjbdsHtK')
+      .then((result) => {
+          setSuccessMessage(`Thank you for your message ${userName}. Your message was sent successfully!`)
+          console.log(result.text);
+      }, (error) => {
+          setErrorMessage('There was an error when sending your message')
+          console.log(error.text);
+          return;
+      });
+  
+      setName('');
+      setEmail('');
+      setMessage('');
+      setErrorMessage('');
+    };
+  
+    return (
+      <div name='contact' className='bg-[#EDEDE8] text-black w-full h-screen flex justify-center items-center p-4 z-20'>
+          <form ref={form} onSubmit={handleFormSubmit} className='flex flex-col max-w-sm sm:max-w-2xl w-full mx-auto justify-center text-black'>
+            <div className='pb-2 items-center'>
+              <p className='text-2xl sm:text-3xl font-light italic text-center text-black'>Contact</p>
+              <p className='text-left text-black py-2 text-center'>Please submit the form below to send me a message.</p>
+            </div>
+            <input
+              className={nameClasses}
+              type='text'
+              name='name'
+              placeholder='Name'
+              value= {userName}
+              onChange={handleInputChange}
+            />
+            <input
+              className={emailClasses}
+              type='email'
+              name='email'
+              placeholder='Email'
+              value= {userEmail}
+              onChange={handleInputChange}
+            />
+            <textarea
+              className={messageClasses}
+              name='message'
+              rows='10'
+              placeholder='Message'
+              value= {userMessage}
+              onChange={handleInputChange}>
+            </textarea>
+            {errorMessage && (
               <div>
-                <div className="float-right">
-                  <button className="bg-gray-800 text-center text-gray-400 px-4 py-2 border rounded-lg hover:scale-110 hover:text-gray-300">
-                    Submit
-                  </button>
-                </div>
+                <p className="error-text font-bold text-red-600 text-center">{errorMessage}</p>
               </div>
-            </form>
-          </div>
-        </div>
+            )}
+            {successMessage && (
+              <div>
+                <p className="error-text font-bold text-green-600 text-center">{successMessage}</p>
+              </div>
+            )}
+            <button className="rounded-md bg-[#A5A58D] text-white italic px-20 py-3 my-5 mx-auto flex items-center shadow hover:shadow-lg m-2">Submit!</button>
+          </form>
       </div>
-    </div>
-  );
-};
-
-export default Contact;
+    )
+  }
+  
+  export default Contact
