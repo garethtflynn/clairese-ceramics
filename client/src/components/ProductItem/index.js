@@ -38,6 +38,7 @@ function ProductItem(props) {
           <button class="px-10 py-1 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7] " onClick={() => setShowModal(true)}>Add To Cart</button>
           {showModal ? (
       <>
+      {/* Add to Cart Modal */}
         <div
           className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
         >
