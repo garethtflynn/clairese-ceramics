@@ -6,7 +6,7 @@ import { Bars3Icon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/rea
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Shop', href: './Products', current: true },
-  { name: 'About', href: '#', current: false },
+  { name: 'About', href: './About', current: false },
   { name: 'Contact', href: './Contact', current: false },
 ]
 
