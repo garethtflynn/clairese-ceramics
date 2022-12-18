@@ -12,7 +12,7 @@ export const Contact = () => {
       'service_lqlnflr',
       'template_e6pw1vk',
       form.current, 
-      '431Oc9v0Sgn_9e-Fl'
+      process.env.REACT_APP_YOUR_PUBLIC_KEY
       )
       .then(
         (result) => {
