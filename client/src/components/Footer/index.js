@@ -3,7 +3,8 @@ import React from 'react';
 function footer() {
     return (
         <footer className="text-center text-white">
-            <div className="flex justify-end mr-4">
+            {/* FUTURE DEVELOPMENT - add links to social media */}
+            {/* <div className="flex justify-end mr-4">
                 
                 <a href="#!" type="button" className="rounded-full bg-black text-white uppercase w-9 h-9 mt-4 mr-2">
                     <svg aria-hidden="true"
@@ -38,15 +39,15 @@ function footer() {
                     ></path>
                     </svg>
                 </a>
-            </div>
+            </div> */}
 
             <div className="w-full flex justify-between text-black font-light italic p-4 text-sm">
-                © 2022 Clairese Ceramics
+                <div className='px-3 py-2'>© 2022 Clairese Ceramics</div>
                 <div className="flex space-x-6 text-sm">
-                    <a href="#">Shipping Policy</a>
-                    <a href="#">Return Policy</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Shipping Policy</a>
+                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Return Policy</a>
+                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Privacy Policy</a>
+                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Terms of Service</a>
                 </div>
             </div>
         </footer>

@@ -47,8 +47,8 @@ if (loading) {
 }
   return (
     <div className="mx-auto mb-20 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-      <h1 className="text-4xl text-center italic mb-4">Main Collection</h1>
-      <div className="pt-5 grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 mx-auto gap-5">
+      <h1 className="text-2xl sm:text-3xl text-center italic mt-4 mb-1 sm:mb-4">Main Collection</h1>
+      <div className="pt-3 sm:pt-5 grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 mx-auto gap-5">
           {data.products.map((product) => (
             <ProductItem
               key={product._id}

@@ -31,13 +31,13 @@ function Login(props) {
   };
 
   return (
-    <div className="flex items-center w-full h-screen bg-[#EDDCD2]">
-      <div className='flex flex-col justify-center items-center mx-auto h-auto rounded-md max-w-screen-sm sm:w-[550px] py-8 gap-4'>
+    <div className="bg-[#EDDCD2] text-black h-screen flex justify-center items-center">
+      <div className='flex flex-col justify-center items-center rounded-md gap-4'>
         <h2 className='text-4xl font-light italic'>Login</h2>
-        <form onSubmit={handleFormSubmit}>
-          <div className="flex-row space-between my-2 sm:w-[500px]">
+        <form onSubmit={handleFormSubmit} className='flex flex-col justify-center text-black'>
+          <div className="flex-row space-between my-2">
             <input
-              className='w-full px-4 py-1'
+              className='w-full px-2 py-2 rounded-md'
               placeholder="Email"
               name="email"
               type="email"
@@ -45,9 +45,9 @@ function Login(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-row space-between my-2 sm:w-[500px]">
+          <div className="flex-row space-between my-2">
             <input
-              className='w-full px-4 py-1'
+              className='w-full px-2 py-2 rounded-md'
               placeholder="Password"
               name="password"
               type="password"
@@ -60,9 +60,9 @@ function Login(props) {
               <p className="error-text">The provided credentials are incorrect</p>
             </div>
           ) : null}
-          <div className="flex space-between">
-            <button type="submit" className='flex text-white px-3 justify-center items-center italic mx-auto h-auto bg-[#A5A58D] hover:scale-105 duration-200'>Sign In</button>
-            <Link to="/signup"><button className='flex text-white italic px-3 py-1 justify-center items-center mx-auto h-auto bg-[#DDBEA9] hover:scale-105 duration-200'>Sign Up</button></Link>
+          <div className="flex space-between grid grid-cols-1 sm:grid-cols-2">
+            <button type="submit" className='rounded-md bg-[#A5A58D] text-white italic px-20 py-2 my-2 mx-auto flex items-center shadow hover:shadow-lg ml-0'>Sign In</button>
+            <Link to="/signup"><button className='rounded-md bg-[#DDBEA9] text-white italic px-20 py-2 my-2 mx-auto flex items-center shadow hover:shadow-lg mr-0'>Sign Up</button></Link>
           </div>
         </form>
       </div>
