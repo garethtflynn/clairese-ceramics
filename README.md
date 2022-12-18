@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+[![License: MIT}](https://img.shields.io/static/v1?label=License&message=MIT&color=yellow)](https://choosealicense.com/licenses/mit/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clairese-Ceramics
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+       This application is an Ecommerce website for Clairese-Ceramics. A small, woman owned business that focuses in custom pottery. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Clairese-Ceramics](#clairese-ceramics)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [User Story](#user-story)
+  - [Dependencies](#dependencies)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Tests](#tests)
+  - [Contributing](#contributing)
+  - [Team Members](#team-members)
+  - [Mockups](#mockups)
 
-### `npm test`
+## User Story
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a user, I wan to be able to shop Clairese-Ceramics' main collection.
 
-### `npm run build`
+When I go to the Url,\
+Then I am met with the home page for the website.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When I click on ``` Shop Collection```,\
+Then I am taken to the products page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When I view the products,\
+Then I have the option to add each item I want to the cart.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When I am done shopping through the main collection,\
+Then I can click on my cart and checkout.
 
-### `npm run eject`
+If I am not logged in,\
+Then it will alert me to log in before i can checkout.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+When I login,\
+Then it will take me to the page where I can enter in my information and pay for the products i put in my cart.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Apollo-Server-Express](https://www.npmjs.com/package/sequelize)
+- [Express](https://www.npmjs.com/package/express)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+- [React](https://reactjs.org/)
+- [Graphql](https://graphql.org/)
+- [Mongoose](https://mongoosejs.com/docs/)
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [Stripe](https://stripe.com/docs/payments/payment-methods)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+      No installation required! Only the Url to view/use the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+Have fun and shop away!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Copyright © 2022. All rights reserved.
 
-### Making a Progressive Web App
+## Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+      none
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Submit suggested improvements as a new GitHub branch to [Clairese-Ceramics](https://github.com/garethtflynn/clairese-ceramics) or contact any of the team members by clicking on their name below.
 
-### Deployment
+## Team Members
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<a href="mailTo: ashclandry@gmail.com?subject=Hello!" alt="">Ashlynn Landry</a>\
+<a href="mailTo: gareth.t.flynn@gmail.com?subject=Hello!" alt="">Gareth Flynn</a>\
+<a href="mailTo: michaelhobbs361219@gmail.com?subject=Hello!" alt="">Michael Hobbs</a>\
+<a href="mailTo: bp4924@gmail.com?subject=Hello!" alt="">Bernie Petters</a>
+<a href="mailTo: christian.bruno1995@gmail.com?subject=Hello!" alt="">Christian Bruno</a>
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Mockups
+
+Home Page ![image]()
+Sign Up ![image]()
+Log In ![image]()
+
+## Credits
+
+- [@garethtflynn](https://www.github.com/garethtflynn)
+- [@Verzo361219](https://github.com/Verzo361219)
+- [@ashclandry](https://github.com/ashclandry)
+- [@bp4924](https://github.com/bp4924)
+- [@CBrunote](https://github.com/CBrunote)
+
+## Links  
+
+* [Repository](https://github.com/garethtflynn/clairese-ceramics)
+* [Deployed Appplication]()
