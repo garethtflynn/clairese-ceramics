@@ -39,9 +39,9 @@ function Signup(props) {
           <input
             className='w-full px-2 py-2 rounded-md'
             placeholder="First Name"
-            name="email"
-            type="email"
-            id="email"
+            name="firstName"
+            type="firstName"
+            id="firstName"
             onChange={handleChange}
           />
         </div>
@@ -49,9 +49,9 @@ function Signup(props) {
           <input
             className='w-full px-2 py-2 rounded-md'
             placeholder="Last Name"
-            name="password"
-            type="password"
-            id="pwd"
+            name="lastName"
+            type="lastName"
+            id="lastName"
             onChange={handleChange}
           />
         </div>
