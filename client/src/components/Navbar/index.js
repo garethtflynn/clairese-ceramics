@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Shop', href: './Products', current: true },
   { name: 'About', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Contact', href: './Contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -42,7 +42,7 @@ export default function Example() {
                     />
                   </a>
                   
-                  <a href='./'>
+                  <a href='/'>
                     <img
                       className="hidden h-28 w-auto lg:block"
                       src={logo}
@@ -102,7 +102,7 @@ export default function Example() {
                     <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="./Login"
                             className={classNames(active ? 'rounded mx-1 hover:bg-[#B0BEC7] hover:text-white' : '', 'block px-4 py-2 text-sm text-black')}
                           >
                             Sign In
