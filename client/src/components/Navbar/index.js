@@ -1,20 +1,44 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import logo from '../../assets/cclogo.png';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
 
-const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Shop', href: './Products', current: true },
-  { name: 'About', href: './About', current: false },
-  { name: 'Contact', href: './Contact', current: false },
-]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
 export default function Example() {
+  const [navTabs, setNavTabs] = useState([
+    { name: 'Home', href: '/', current: true },
+    { name: 'Shop', href: './Products', current: false },
+    { name: 'About', href: './About', current: false },
+    { name: 'Contact', href: './Contact', current: false },
+  ])
+
+  function changeTabs(e) {
+    console.log(e.target.textContent);
+    let navigation = [
+      { name: 'Home', href: '/', current: true },
+      { name: 'Shop', href: './Products', current: false },
+      { name: 'About', href: './About', current: false },
+      { name: 'Contact', href: './Contact', current: false },
+    ]
+    if(e.target.textContent !== 'Home') {
+      navigation[0].current = false
+      for(let i = 0; i < navigation.length; i++) {
+        if(navigation[i].name === e.target.textContent) {
+          navigation[i].current = true
+        }
+      }
+    } 
+    setNavTabs(navigation)
+  }
+  
+  
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
@@ -53,10 +77,11 @@ export default function Example() {
                 </div>
                 <div className="hidden py-12 sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
+                    {navTabs.map((item) => (
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
+                        onClick={ changeTabs }
                         className={classNames(
                           item.current ? 'bg-[#B0BEC7] text-white' : 'text-black hover:bg-[#B0BEC7] hover:text-white',
                           'px-3 py-2 rounded-md text-md font-light italic'
@@ -64,7 +89,7 @@ export default function Example() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -138,7 +163,7 @@ export default function Example() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
-              {navigation.map((item) => (
+              {navTabs.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"

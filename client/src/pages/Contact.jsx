@@ -9,10 +9,10 @@ export const Contact = () => {
 
     emailjs
     .sendForm(
-      'service_lqlnflr',
-      'template_e6pw1vk',
+      process.env.REACT_APP_YOUR_SERVICE_ID,
+      process.env.REACT_APP_YOUR_TEMPLATE_ID,
       form.current, 
-      '431Oc9v0Sgn_9e-Fl'
+      process.env.REACT_APP_YOUR_PUBLIC_KEY
       )
       .then(
         (result) => {
