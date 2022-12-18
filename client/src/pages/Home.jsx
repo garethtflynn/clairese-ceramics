@@ -11,42 +11,42 @@ function Home() {
         <div id="carouselExampleSlidesOnly" className="carousel slide relative" data-bs-ride="carousel">
             <div className="carousel-inner relative w-full overflow-hidden">
                 <div className="carousel-item active relative float-left w-full">
-                    <h1 className="absolute top-10 text-right right-2 sm:right-20 text-white italic px-20 py-2 m-2 fontFamily text-2xl sm:text-5xl">handmade in georgia <br />by ashlynn claire<br /></h1>
                     <img
                     src={twinmug1}
                     class="block w-full"
                     alt="Twin Mug"
                     />
+                    <h5 className="absolute bottom-20 sm:bottom-40 text-black italic px-20 fontFamily text-4xl sm:text-5xl mb-6 sm:mb-0">handmade in atlanta, georgia</h5>
                     <Link to='/products'><button className="rounded-md absolute bottom-10 sm:bottom-20 left-20 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
 
                 </div>
                 <div className="carousel-item relative float-left w-full">
-                    <h1 className="absolute top-10 text-right right-2 sm:right-20 text-white italic px-20 py-2 m-2 fontFamily text-2xl sm:text-5xl">handmade in georgia <br />by ashlynn claire<br /></h1>
                     <img
                     src={pitcher1}
                     class="block w-full"
                     alt="Pitcher"
                     />
+                    <h5 className="absolute bottom-20 sm:bottom-40 text-black italic px-20 fontFamily text-4xl sm:text-5xl mb-6 sm:mb-0">handmade in atlanta, georgia</h5>
                     <Link to='/products'><button className="rounded-md absolute bottom-10 sm:bottom-20 left-20 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
 
                 </div>
                 <div class="carousel-item relative float-left w-full">
-                    <h1 className="absolute top-10 text-right right-2 sm:right-20 text-white italic px-20 py-2 m-2 fontFamily text-xl sm:text-5xl">handmade in georgia <br />by ashlynn claire<br /></h1>
                     <img
                     src={curvymug1}
                     className="block w-full"
                     alt="Curvy Mug"
                     />
+                    <h5 className="absolute bottom-20 sm:bottom-40 text-black italic px-20 fontFamily text-4xl sm:text-5xl mb-6 sm:mb-0">handmade in atlanta, georgia</h5>
                     <Link to='/products'><button className="rounded-md absolute bottom-10 sm:bottom-20 left-20 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
                 </div>
 
                 <div class="carousel-item relative float-left w-full">
-                    <h1 className="absolute top-10 text-right right-2 sm:right-20 text-white italic px-20 py-2 m-2 fontFamily text-2xl sm:text-5xl">handmade in georgia <br />by ashlynn claire<br /></h1>
                     <img
                     src={set1}
                     className="block w-full"
                     alt="Full Set"
                     />
+                    <h5 className="absolute bottom-20 sm:bottom-40 text-black italic px-20 fontFamily text-4xl sm:text-5xl mb-6 sm:mb-0">handmade in atlanta, georgia</h5>
                     <Link to='/products'><button className="rounded-md absolute bottom-10 sm:bottom-20 left-20 bg-[#A5A58D] text-white italic px-20 py-2 shadow hover:shadow-lg m-2">Shop Collection</button></Link>
                 </div>
             </div>
