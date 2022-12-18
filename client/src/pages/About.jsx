@@ -12,7 +12,7 @@ function About() {
             <img src={ throwing } alt="image" loading="lazy" className="w-full"  />
           </div>
           <div class="md:7/12 lg:w-6/12">
-            <h1 class="text-2xl text-black font-light italic sm:text-4xl">About Me</h1>
+            <h1 class="text-2xl text-black font-light italic sm:text-3xl">About Me</h1>
             <h4 class="text-md text-black italic font-regular ">Ceramic Lover</h4>
             <p class="mt-4 font-light italic text-black">Hi! My name is Ashlynn Claire.</p>
             <p class="mt-4 font-light italic text-black"> More about me here </p>
