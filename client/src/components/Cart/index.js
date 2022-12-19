@@ -32,7 +32,7 @@ const Cart = () => {
         if (!state.cart.length) {
           getCart();
         }
-    }, [state.cart.length, dispatch]);
+    }, [state, dispatch]);
 
     function toggleCart() {
         dispatch({ type: TOGGLE_CART });
@@ -46,7 +46,7 @@ const Cart = () => {
         return sum.toFixed(2);
     }
 
-    function submitCheckout() {
+    const submitCheckout = async () => {
         const productIds = [];
     
         state.cart.forEach((item) => {
@@ -55,7 +55,7 @@ const Cart = () => {
           }
         });
     
-        getCheckout({
+        await getCheckout({
           variables: { products: productIds },
         });
     }
