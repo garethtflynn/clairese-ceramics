@@ -32,6 +32,21 @@ function ProductItem(props) {
     }
   };
 
+  const getImage2 = () => {
+    if (image === "curvymug2.jpg") {
+      return curvymug1;
+    }
+    if (image === "pitcher2.jpg") {
+      return pitcher1;
+    }
+    if (image === "set2.jpg") {
+      return set1;
+    }
+    if (image === "twinmug2.jpg") {
+      return twinmug1;
+    }
+  };
+
   return (
     <div className="grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mx-auto gap-5">
       <div className="text-center">
@@ -62,7 +77,6 @@ function ProductItem(props) {
                       </Link>
             
                     </div>
-
                       <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                         <button
                           type="button"
@@ -88,7 +102,7 @@ function ProductItem(props) {
                       <div class="carousel-inner relative w-full overflow-hidden">
                         <div class="carousel-item active float-left w-full">
                           <img
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+                            src={getImage()}
                             class="block w-full"
                             alt="Wild Landscape"
                           />
