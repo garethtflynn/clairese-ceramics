@@ -1,8 +1,49 @@
-# Getting Started with Create React App
+# Interactive MERN Stack Single-Page Application: Clairese Ceramics
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
+
+Clariese Ceramics is an MERN stack-single-page application that utilizes MongoDB, GraphQL, Express.js, Node.js and React while implementing user authentication with JWT to build a user-focused platform that allows customers to shop the pottery of ceramic artist, Ashlynn Claire.
+
+[View Deployed Application on Heroku]()
+
+## Table of Contents 
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Technologies Used](#technologies-used)
+- [Final Application](#final-application)
+- [Installation](#installation)
+
+## User Story
+
+```md
+AS An Artist 
+I WANT a full stack e-commerce website 
+SO THAT I can showcase and sell my work 
+```
+
+## Technologies Used
+
+* GraphQL
+* Node.js
+* Express.js
+* Moment.js
+* MongoDB
+* Mongoose ODM
+* Heroku
+* Tailwind CSS Framework 
+* HTML
+* CSS
+* JavaScript
+* React
+
+## Final Application
+
+[View Deployed Application on Heroku](https://guarded-springs-49580.herokuapp.com/)
+![screenshot of final product]()
+
+## Installation
 
 In the project directory, you can run:
 
