@@ -16,6 +16,13 @@ Clairese Ceramics is an e-commerce site designed to showcase and sell the potter
 - [Technologies Used](#technologies-used)
 - [Final Application](#final-application)
 - [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Tests](#tests)
+- [Contributing](#contributing)
+- [Team Members](#team-members)
+- [Credits](#credits)
+- [Links](#links)
 
 ## User Story
 
@@ -71,7 +78,9 @@ Then it will take me to the page where I can enter in my information and pay for
 ## Final Application
 
 [View Deployed Application on Heroku](https://guarded-springs-49580.herokuapp.com/)
-![screenshot of final product]()
+Home Page ![image](./client/src/assets/screenshot-home.png)
+Shop Page ![image](./client/src/assets/screenshot-main.png)
+
 
 ## Installation
 
@@ -101,12 +110,6 @@ Submit suggested improvements as a new GitHub branch to [Clairese-Ceramics](http
 <a href="mailTo: michaelhobbs361219@gmail.com?subject=Hello!" alt="">Michael Hobbs</a>\
 <a href="mailTo: bp4924@gmail.com?subject=Hello!" alt="">Bernie Petters</a>
 <a href="mailTo: christian.bruno1995@gmail.com?subject=Hello!" alt="">Christian Bruno</a>
-
-## Mockups
-
-Home Page ![image]()
-Sign Up ![image]()
-Log In ![image]()
 
 ## Credits
 
