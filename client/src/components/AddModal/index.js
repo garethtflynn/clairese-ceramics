@@ -84,7 +84,7 @@ function AddModal(props) {
                           alt="Camera"
                         />
                       </div>
-                      <div class="carousel-item float-left w-full">
+                      <div className="carousel-item float-left w-full">
                         <img
                           src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
                           className="block w-full"
