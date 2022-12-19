@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 // import { Link } from 'react-router-dom';
-function footer() {
-    return (
-        <footer className="text-center text-white">
-            {/* FUTURE DEVELOPMENT - add links to social media */}
-            {/* <div className="flex justify-end mr-4">
+function Footer() {
+  return (
+    <footer className="text-center text-white">
+      {/* FUTURE DEVELOPMENT - add links to social media */}
+      {/* <div className="flex justify-end mr-4">
                 
                 <a href="#!" type="button" className="rounded-full bg-black text-white uppercase w-9 h-9 mt-4 mr-2">
                     <svg aria-hidden="true"
@@ -41,17 +41,37 @@ function footer() {
                 </a>
             </div> */}
 
-            <div className="w-full flex justify-between text-black font-light italic p-4 text-sm">
-                <div className='px-3 py-2'>© 2022 Clairese Ceramics</div>
-                <div className="flex space-x-6 text-sm">
-                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Shipping Policy</a>
-                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Return Policy</a>
-                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Privacy Policy</a>
-                    <a href="#" className='hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md'>Terms of Service</a>
-                </div>
-            </div>
-        </footer>
-    )
+      <div className="w-full flex text-black font-light italic p-4 text-sm md:justify-between lg:justify-between">
+        <div className="px-3 py-2">© 2022 Clairese Ceramics</div>
+        <div className="flex space-x-6 text-sm flex-col sm:flex-row ">
+          <a
+            href="/"
+            className="hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md"
+          >
+            Shipping Policy
+          </a>
+          <a
+            href="/"
+            className="hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md"
+          >
+            Return Policy
+          </a>
+          <a
+            href="/"
+            className="hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="/"
+            className="hover:bg-[#B0BEC7] hover:text-white px-3 py-2 rounded-md"
+          >
+            Terms of Service
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default footer;
+export default Footer;
