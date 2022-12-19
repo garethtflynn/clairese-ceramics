@@ -14,6 +14,7 @@ Clariese Ceramics is an MERN stack-single-page application that utilizes MongoDB
 - [Technologies Used](#technologies-used)
 - [Final Application](#final-application)
 - [Installation](#installation)
+- [Learn More(#learn-more)
 
 ## User Story
 
