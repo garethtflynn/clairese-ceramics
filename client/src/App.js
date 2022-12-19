@@ -14,7 +14,7 @@ import Signup from "./pages/Signup";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import About from "./pages/About";
-import Cart from "./pages/Cart";
+import Cart from "./components/Cart/index";
 import { StoreProvider } from "./utils/GlobalState";
 
 // //components
