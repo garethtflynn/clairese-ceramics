@@ -1,16 +1,18 @@
-# Interactive MERN Stack Single-Page Application: Clairese Ceramics
+# Clairese-Ceramics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT}](https://img.shields.io/static/v1?label=License&message=MIT&color=yellow)](https://choosealicense.com/licenses/mit/)
 
 ## Description
 
-Clariese Ceramics is an MERN stack-single-page application that utilizes MongoDB, GraphQL, Express.js, Node.js and React while implementing user authentication with JWT to build a user-focused platform that allows customers to shop the pottery of ceramic artist, Ashlynn Claire.
+Clairese Ceramics is an e-commerce site designed to showcase and sell the pottery created by ceramic artist, Ashlynn Claire. Customers are welcome to browse, shop, learn about the story behind the company. 
 
-[View Deployed Application on Heroku]()
+[View Deployed Application on Heroku](https://clairese-ceramics.herokuapp.com/)
 
 ## Table of Contents 
+
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
+- [Dependencies](#dependencies)
 - [Technologies Used](#technologies-used)
 - [Final Application](#final-application)
 - [Installation](#installation)
@@ -22,6 +24,34 @@ AS An Artist
 I WANT a full stack e-commerce website 
 SO THAT I can showcase and sell my work 
 ```
+
+## Acceptance Criteria
+
+```md
+When I go to the Url,\
+Then I am met with the home page for the website.
+When I click on ``` Shop Collection```,\
+Then I am taken to the products page.
+When I view the products,\
+Then I have the option to add each item I want to the cart.
+When I am done shopping through the main collection,\
+Then I can click on my cart and checkout.
+If I am not logged in,\
+Then it will alert me to log in before i can checkout.
+When I login,\
+Then it will take me to the page where I can enter in my information and pay for the products i put in my cart.
+```
+## Dependencies
+
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Apollo-Server-Express](https://www.npmjs.com/package/sequelize)
+- [Express](https://www.npmjs.com/package/express)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+- [React](https://reactjs.org/)
+- [Graphql](https://graphql.org/)
+- [Mongoose](https://mongoosejs.com/docs/)
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [Stripe](https://stripe.com/docs/payments/payment-methods)
 
 ## Technologies Used
 
@@ -45,67 +75,48 @@ SO THAT I can showcase and sell my work
 
 ## Installation
 
-In the project directory, you can run:
+      No installation required! Only the Url to view/use the application.
+      
+## Usage
 
-### `npm start`
+Have fun and shop away!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## License
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license;
+Copyright © 2022. All rights reserved.
 
-### `npm test`
+## Tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Not Applicable 
+      
+## Contributing
 
-### `npm run build`
+Submit suggested improvements as a new GitHub branch to [Clairese-Ceramics](https://github.com/garethtflynn/clairese-ceramics) or contact any of the team members by clicking on their name below.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Team Members
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="mailTo: ashclandry@gmail.com?subject=Hello!" alt="">Ashlynn Landry</a>\
+<a href="mailTo: gareth.t.flynn@gmail.com?subject=Hello!" alt="">Gareth Flynn</a>\
+<a href="mailTo: michaelhobbs361219@gmail.com?subject=Hello!" alt="">Michael Hobbs</a>\
+<a href="mailTo: bp4924@gmail.com?subject=Hello!" alt="">Bernie Petters</a>
+<a href="mailTo: christian.bruno1995@gmail.com?subject=Hello!" alt="">Christian Bruno</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Mockups
 
-### `npm run eject`
+Home Page ![image]()
+Sign Up ![image]()
+Log In ![image]()
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Credits
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [@garethtflynn](https://www.github.com/garethtflynn)
+- [@Verzo361219](https://github.com/Verzo361219)
+- [@ashclandry](https://github.com/ashclandry)
+- [@bp4924](https://github.com/bp4924)
+- [@CBrunote](https://github.com/CBrunote)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Links
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Repository](https://github.com/garethtflynn/clairese-ceramics)
+* [Deployed Appplication](https://clairese-ceramics.herokuapp.com/)
