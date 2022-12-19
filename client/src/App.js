@@ -8,14 +8,14 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import Home from './pages/Home'
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
-import About from './pages/About';
-import Detail from "./pages/Cart";
-import { StoreProvider } from './utils/GlobalState';
+import About from "./pages/About";
+import Cart from "./pages/Cart";
+import { StoreProvider } from "./utils/GlobalState";
 
 // //components
 import Navbar from "./components/Navbar/index";
@@ -54,7 +54,7 @@ function App() {
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/Products" element={<Products />} />
-              <Route path="/Cart" element={<Detail />} />
+              <Route path="/Cart" element={<Cart />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/About" element={<About />} />
             </Routes>

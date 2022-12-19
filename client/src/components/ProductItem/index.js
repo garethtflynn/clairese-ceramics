@@ -1,21 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import curvymug1 from '../../assets/curvymug1.jpg'
-import curvymug2 from '../../assets/curvymug2.jpg'
-import curvymug3 from '../../assets/curvymug3.jpg'
-import pitcher1 from '../../assets/pitcher1.jpg'
-import pitcher2 from '../../assets/pitcher2.jpg'
-import pitcher3 from '../../assets/pitcher3.jpg'
-import set1 from '../../assets/set1.jpg'
-import set2 from '../../assets/set2.jpg'
-import set3 from '../../assets/set3.jpg'
-import twinmug1 from '../../assets/twinmug1.jpg'
-import twinmug2 from '../../assets/twinmug2.jpg'
-import twinmug3 from '../../assets/twinmug3.jpg'
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
+import { pluralize } from "../../utils/helpers";
+import { useStoreContext } from "../../utils/GlobalState";
+
+import curvymug1 from "../../assets/curvymug1.jpg";
+// import curvymug2 from '../../assets/curvymug2.jpg'
+// import curvymug3 from '../../assets/curvymug3.jpg'
+import pitcher1 from "../../assets/pitcher1.jpg";
+// import pitcher2 from '../../assets/pitcher2.jpg'
+// import pitcher3 from '../../assets/pitcher3.jpg'
+import set1 from "../../assets/set1.jpg";
+// import set2 from '../../assets/set2.jpg'
+// import set3 from '../../assets/set3.jpg'
+import twinmug1 from "../../assets/twinmug1.jpg";
+// import twinmug2 from '../../assets/twinmug2.jpg'
+// import twinmug3 from '../../assets/twinmug3.jpg'
 
 function ProductItem(props) {
+  const [state, dispatch] = useStoreContext();
   const [showModal, setShowModal] = React.useState(false);
-  const { _id, name, price, image, description } = props.item;
+  const { _id, name, price, image, description, quantity } = props.item;
+
+  const { cart } = state;
+  const addToCart = async () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id);
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+      idbPromise("cart", "put", {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...props.item, purchaseQuantity: 1 },
+      });
+      await idbPromise("cart", "put", { ...props.item, purchaseQuantity: 1 });
+    }
+  };
 
   const getImage = () => {
     if (image === "curvymug1.jpg") {
@@ -32,42 +60,50 @@ function ProductItem(props) {
     }
   };
 
-  const getImage2 = () => {
-    if (image === "curvymug2.jpg") {
-      return curvymug1;
-    }
-    if (image === "pitcher2.jpg") {
-      return pitcher1;
-    }
-    if (image === "set2.jpg") {
-      return set1;
-    }
-    if (image === "twinmug2.jpg") {
-      return twinmug1;
-    }
-  };
+  // const getImage2 = () => {
+  //   if (image === "curvymug2.jpg") {
+  //     return curvymug1;
+  //   }
+  //   if (image === "pitcher2.jpg") {
+  //     return pitcher1;
+  //   }
+  //   if (image === "set2.jpg") {
+  //     return set1;
+  //   }
+  //   if (image === "twinmug2.jpg") {
+  //     return twinmug1;
+  //   }
+  // };
 
   return (
     <div className="grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mx-auto gap-5">
       <div className="text-center">
-        <img alt={name} src={getImage()} />
-        <p className="mt-3 mb-2">
-          {name} - ${price}
-        </p>
+        <Link to={`/products/${_id}`}>
+          <img alt={name} src={getImage()} />
+          <p className="mt-3 mb-2">
+            {name} - ${price}
+          </p>
+        </Link>
+        <div>
+          <div>
+            {quantity} {pluralize("item", quantity)} in stock
+          </div>
+        </div>
         <button
           className="px-10 py-1 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7] "
-          onClick={() => setShowModal(true)}
+          onClick={async () => {
+            await addToCart();
+          }}
         >
           Add To Cart
         </button>
-        {showModal ? (
+
+        {/* {showModal ? (
           <>
-          {/* Add to Cart Modal */}
             <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                   <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                    {/* Carousel */}
                     <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
                     <div className="prod-title mb-3">
                       <Link to={`/Products/${_id}`}>
@@ -103,7 +139,7 @@ function ProductItem(props) {
                         <div class="carousel-item active float-left w-full">
                           <img
                             src={getImage()}
-                            class="block w-full"
+                            className="block w-full"
                             alt="Wild Landscape"
                           />
                         </div>
@@ -143,12 +179,11 @@ function ProductItem(props) {
                     </div>
                   </div>
                   
-                  {/*footer*/}
                   <div className="flex items-center justify-center p-6 rounded-b">
                     <button
                       className="px-24 py-2 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7]"
                       type="button"
-                      onClick={() => setShowModal(false)}
+                      onClick={addToCart}
                     >
                       Add To Cart
                     </button>
@@ -158,7 +193,7 @@ function ProductItem(props) {
             </div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );
