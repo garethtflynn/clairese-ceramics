@@ -100,6 +100,7 @@ function Cart() {
       {cart.map((cartItem) => {
         return <p>{cartItem.name}</p>;
       })}
+      
       {/* {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/products">← Back to Products</Link>

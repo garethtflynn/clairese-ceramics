@@ -1,5 +1,4 @@
 import React from "react";
-import artistPicture from "../../src/assets/artistpicture.jpeg";
 import throwing from "../../src/assets/throwing.jpg";
 import { Link } from "react-router-dom";
 
@@ -19,11 +18,13 @@ function About() {
               Ceramic Lover
             </h4>
             <p className="mt-4 font-light italic text-black">
-              Hi! My name is Ashlynn Claire.
+            I'm Ashlynn Landry, a 20-something-year-old building a career for myself in Web Development. Born in Baton Rouge, raised as a Georgia peach, and graduated with a BBA from Ole Miss, my heart lies in many places, primarily with my dog Jamie, pottery, and design.
             </p>
             <p className="mt-4 font-light italic text-black">
-              {" "}
-              More about me here{" "}
+            In my previous role as Marketing and Communications Coordinator at Good Samaritan Health Center, I grew a liking for web design and development, which led me to the Georgia Institute of Technology's coding Bootcamp. I am working towards a Full Stack Flex Web Development certificate and will graduate in December 2022.
+            </p>
+            <p className="mt-4 font-light italic text-black">
+            With my background in marketing and a love for graphic design, this website showcases the skills I have learned thus far in web development as well as in ceramics.
             </p>
           </div>
         </div>
