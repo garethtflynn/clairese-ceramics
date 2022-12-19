@@ -1,93 +1,153 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import curvymug from '../../assets/curvymug1.jpg'
-import pitcher from '../../assets/pitcher1.jpg'
-import set from '../../assets/set1.jpg'
-import twinmug from '../../assets/twinmug1.jpg'
-
-
-
+import curvymug1 from '../../assets/curvymug1.jpg'
+import curvymug2 from '../../assets/curvymug2.jpg'
+import curvymug3 from '../../assets/curvymug3.jpg'
+import pitcher1 from '../../assets/pitcher1.jpg'
+import pitcher2 from '../../assets/pitcher2.jpg'
+import pitcher3 from '../../assets/pitcher3.jpg'
+import set1 from '../../assets/set1.jpg'
+import set2 from '../../assets/set2.jpg'
+import set3 from '../../assets/set3.jpg'
+import twinmug1 from '../../assets/twinmug1.jpg'
+import twinmug2 from '../../assets/twinmug2.jpg'
+import twinmug3 from '../../assets/twinmug3.jpg'
 
 function ProductItem(props) {
-
   const [showModal, setShowModal] = React.useState(false);
-  const { _id, name, price, image } = props.item;
+  const { _id, name, price, image, description } = props.item;
 
-    const getImage = () => {
-        if (image === 'curvymug1.jpg'){
-            return curvymug;
-        } if (image === 'pitcher1.jpg'){ 
-            return pitcher
-        } if (image === 'set1.jpg') {
-            return set
-        } if (image === 'twinmug1.jpg') {
-            return twinmug
-        }
+  const getImage = () => {
+    if (image === "curvymug1.jpg") {
+      return curvymug1;
     }
+    if (image === "pitcher1.jpg") {
+      return pitcher1;
+    }
+    if (image === "set1.jpg") {
+      return set1;
+    }
+    if (image === "twinmug1.jpg") {
+      return twinmug1;
+    }
+  };
 
   return (
     <div className="grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mx-auto gap-5">
       <div className="text-center">
-          <img 
-            alt={name} 
-            src={getImage()} 
-          />
-          <p className="mt-3 mb-2">
-            {name} - ${price}
-          </p>
-          <button class="px-10 py-1 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7] " onClick={() => setShowModal(true)}>Add To Cart</button>
-          {showModal ? (
-      <>
-      {/* Add to Cart Modal */}
-        <div
-          className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+        <img alt={name} src={getImage()} />
+        <p className="mt-3 mb-2">
+          {name} - ${price}
+        </p>
+        <button
+          className="px-10 py-1 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7] "
+          onClick={() => setShowModal(true)}
         >
-          <div className="relative w-auto my-6 mx-auto max-w-3xl">
-            {/*content*/}
-            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-              {/*header*/}
-              <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                <h3 className="text-3xl font-semibold">
-                  Mug Name
-                </h3>
-                <button
-                  className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                  onClick={() => setShowModal(false)}
-                >
-                </button>
-              </div>
-              {/*body*/}
-              <div className="relative p-6 flex-auto">
-                <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                </p>
-              </div>
-              {/*footer*/}
-              <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                <button
-                  className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                >
-                  Close
-                </button>
-                <button
-                  className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                >
-                  Add to cart
-                </button>
+          Add To Cart
+        </button>
+        {showModal ? (
+          <>
+          {/* Add to Cart Modal */}
+            <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+              <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                  <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                    {/* Carousel */}
+                    <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+                    <div className="prod-title mb-3">
+                      <Link to={`/Products/${_id}`}>
+                        <p className="text-2xl text-black italic">{name}</p>
+                        <p className="text-lg italic">${price}</p>
+                        <p className="text-sm text-black font-light italic">{description}</p>
+                      </Link>
+            
+                    </div>
+
+                      <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="0"
+                          class="active"
+                          aria-current="true"
+                          aria-label="Slide 1"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="1"
+                          aria-label="Slide 2"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="2"
+                          aria-label="Slide 3"
+                        ></button>
+                      </div>
+                      <div class="carousel-inner relative w-full overflow-hidden">
+                        <div class="carousel-item active float-left w-full">
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+                            class="block w-full"
+                            alt="Wild Landscape"
+                          />
+                        </div>
+                        <div class="carousel-item float-left w-full">
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+                            class="block w-full"
+                            alt="Camera"
+                          />
+                        </div>
+                        <div class="carousel-item float-left w-full">
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+                            class="block w-full"
+                            alt="Exotic Fruits"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                      >
+                        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                      >
+                        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/*footer*/}
+                  <div className="flex items-center justify-center p-6 rounded-b">
+                    <button
+                      className="px-24 py-2 transition ease-in duration-200 rounded hover:shadow-lg text-white italic font-light bg-[#B0BEC7]"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Add To Cart
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-      </>
-    ) : null}
+            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          </>
+        ) : null}
       </div>
     </div>
-
-      );
-    }
+  );
+}
 
 export default ProductItem;
