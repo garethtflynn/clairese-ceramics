@@ -9,6 +9,8 @@ import {
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
+  ADD_MULTIPLE_TO_CART,
+  LOAD_CART,
 } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
@@ -16,13 +18,25 @@ import spinner from "../assets/spinner.gif";
 
 function Cart() {
   const [state, dispatch] = useStoreContext();
-  const { id } = useParams();
+  // const { id } = useParams();
 
-  const [currentProduct, setCurrentProduct] = useState({});
+  // const [currentProduct, setCurrentProduct] = useState({});
 
   // const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   const { products, cart } = state;
+
+  console.log(state);
+
+  useEffect(() => {
+    idbPromise("cart", "get").then((indexedProducts) => {
+      // Load whatever is in the cart on indexeDB
+      dispatch({
+        type: LOAD_CART,
+        products: indexedProducts,
+      });
+    });
+  }, []);
 
   // useEffect(() => {
   //   // already in global store
@@ -84,7 +98,7 @@ function Cart() {
   return (
     <>
       {cart.map((cartItem) => {
-        <p>{cartItem.description}</p>;
+        return <p>{cartItem.name}</p>;
       })}
       {/* {currentProduct && cart ? (
         <div className="container my-1">
